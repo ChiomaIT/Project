@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My Web App</title>
+  <link rel="stylesheet" href="LandingCSS.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Welcome to Student Help Hub</h1>
+    <form action="dashboard.html" method="post">
+      <h2>Login</h2>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <a href="dashboard.html"><input type="submit" value="Login"></a>
+    </form>
+    <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+    <button onclick="signInWithGoogle()">Login with Google</button>
+  </div>
+  <!-- Add any necessary JavaScript code here -->
+</body>
+
+</html>
