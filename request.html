@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+	<title>Availability Table</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			margin: 20px 0;
+		}
+
+		th, td {
+			padding: 8px;
+			text-align: center;
+			border: 1px solid black;
+		}
+
+		th {
+			background-color: lightgrey;
+			font-weight: bold;
+		}
+
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+        #confirm-btn {
+            position: absolute;
+            top: 700; 
+            right: 100px; 
+            font-size: 20px;
+        }
+
+	</style>
+</head>
+<body>
+    <link rel="stylesheet" href="dashboardCSS.css">
+    <div class="dashboard-header">
+        <div class="dashboard-header-menu">
+            <div class="dashboard-header-menu-item active"><a href="dashboard.html"><span>EdAssist</span></a></div>
+            <div class="dashboard-header-menu-item"><a href="people.html">People</a></div>
+        <div class="dashboard-header-menu-item"><a href="opportunities.html">Opportunities</a></div>
+        <div class="dashboard-header-menu-item"><a href="#">Settings</a></div>
+        </div>
+        <div class="dashboard-header-user">
+        <img src="Profile_Pic_Hack.webp" alt="User Icon">
+        <span class="username">Selena Smith</span>
+        <span class="arrow">&#9660;</span>
+        <div class="dashboard-header-user-dropdown">
+            <a href="userProfile.html">Profile</a>
+            <a href="index.html">Logout</a>
+        </div>
+        </div>
+    </div>
+</body>
+<body>
+
+	<table>
+        <tr>
+            <th>Day of the week</th>
+            <th>Available days</th>
+            <th>Time</th>
+            <th>Request days</th>
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td>Yes</td>
+            <td>9am-12pm</td>
+            <td><input type="checkbox" onclick="this.checked=true;"></td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td>No</td>
+            <td>---</td>
+            <td>---</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>Yes</td>
+            <td>1pm-4pm</td>
+            <td><input type="checkbox" onclick="this.checked=true;"></td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td>Yes</td>
+            <td>10am-12pm</td>
+            <td><input type="checkbox" onclick="this.checked=true;"></td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td>No</td>
+            <td>---</td>
+            <td>---</td>
+        </tr>
+        <tr>
+            <td>Saturday</td>
+            <td>No</td>
+            <td>---</td>
+            <td>---</td>
+        </tr>
+        <tr>
+            <td>Sunday</td>
+            <td>Yes</td>
+            <td>3pm-5pm</td>
+            <td><input type="checkbox" onclick="this.checked=true;"></td>
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td>Yes</td>
+            <td>9am-12pm</td>
+            <td><input type="checkbox" onclick="this.checked=true;"></td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td>No</td>
+            <td>---</td>
+            <td>---</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>Yes</td>
+            <td>1pm-4pm</td>
+            <td><input type="checkbox" onclick="this.checked=true;"></td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td>Yes</td>
+            <td>10am-12pm</td>
+            <td><input type="checkbox" onclick="this.checked=true;"></td>
+        </tr>
+        
+        </table>
+        
+
+        <button id="confirm-btn" onclick="confirmRequest()">Confirm Request</button>
+        <script>
+            function confirmRequest() {
+            var btn = document.getElementById("confirm-btn");
+            btn.innerHTML = '<i class="fas fa-check"></i> Request Confirmed';
+        }
+        </script>
+
+</body>
+</html>

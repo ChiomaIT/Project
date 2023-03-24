@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Internship Opportunities</title>
+    <link rel="stylesheet" href="opportunities.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <link rel="stylesheet" href="dashboardCSS.css">
+    <div class="dashboard-header">
+        <div class="dashboard-header-menu">
+            <div class="dashboard-header-menu-item active"><a href="dashboard.html"><span>EdAssist</span></a></div>
+            <div class="dashboard-header-menu-item"><a href="people.html">People</a></div>
+        <div class="dashboard-header-menu-item"><a href="opportunities.html">Opportunities</a></div>
+        <div class="dashboard-header-menu-item"><a href="#">Settings</a></div>
+        </div>
+        <div class="dashboard-header-user">
+        <img src="Profile_Pic_Hack.webp" alt="User Icon">
+        <span class="username">Selena Smith</span>
+        <span class="arrow">&#9660;</span>
+        <div class="dashboard-header-user-dropdown">
+            <a href="userProfile.html">Profile</a>
+            <a href="index.html">Logout</a>
+        </div>
+        </div>
+    </div>
+</body>
+<body>
+	<h1>Internship Opportunities Just For You!</h1>
+	
+	<label for="year-dropdown">Select your classification:</label>
+	<select id="year-dropdown">
+        <option value="select one">Select</option>
+		<option value="freshman">Freshman</option>
+		<option value="sophomore">Sophomore</option>
+		<option value="junior">Junior</option>
+		<option value="senior">Senior</option>
+	</select>
+	<br><br>
+
+	<div id="internship-list"></div>
+	<button id="show-internships-btn">Show Internships</button>
+	<script>
+		$(document).ready(function() {
+			$('#show-internships-btn').click(function() {
+				var year = $('#year-dropdown').val();
+				var internships = '';
+
+				if (year === 'freshman') {
+					internships += '<ul><li>Google STEP Internship</li><li>Microsoft Explore Internship</li><li>JPMorgan Chase Launching Leaders Program</li><li>PwC Start Internship</li><li>AT&T Summer Learning Academy</li></ul>';
+				} else if (year === 'sophomore') {
+					internships += '<ul><li>Apple Software Engineering Internship</li><li>Deloitte Discovery Internship</li><li>Goldman Sachs Early Insights Program</li><li>The New York Times Student Journalism Institute</li><li>NASA Internships</li></ul>';
+				} else if (year === 'junior') {
+					internships += '<ul><li>Facebook Software Engineering Internship</li><li>Amazon Future Engineer Internship</li><li>American Red Cross Disaster Cycle Services Internship</li><li>Pfizer Summer Student Worker Program</li><li>Teach For America Summer Internship</li></ul>';
+				} else if (year === 'senior') {
+					internships += '<ul><li>Google Software Engineering Internship</li><li>IBM Summit Internship Program</li><li>Ford Motor Company Product Development Internship</li><li>NBCUniversal Internship Program</li><li>Procter &amp; Gamble Finance &amp; Accounting Internship</li></ul>';
+				}
+
+				$('#internship-list').html(internships);
+			});
+		});
+	</script>
+</body>
+</html>
